@@ -389,7 +389,7 @@
     handleGeocode: function(results, status){
       if (status === google.maps.GeocoderStatus.OK) {
         var result = results[0];
-        this.$input.val(result.formatted_address);
+        this.$input.val(result.name + " " + result.locality);
         this.update(result);
 
         if (results.length > 1){
